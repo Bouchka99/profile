@@ -1,0 +1,135 @@
+<!-- <mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title style="font-size: 30px;font-weight:500">MENAA Mahdi</mat-card-title>
+        <mat-card-subtitle style="margin-bottom: 30px;">Computer Science Student</mat-card-subtitle>
+    </mat-card-header>
+
+
+    <div class="container overflow-hidden">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3 "><i class="fas fa-folder-open"></i>Projet 1</div>
+            </div>
+            <div class="col">
+                <div class="p-3">
+                    <a href="mailto:mahdi.menaa@ensi-uma.tn">mahdi.menaa@ensi-uma.tn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1 overflow-hidden">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3" style="margin-left: 31px;"><i class="fab fa-linkedin"></i>LinkedIn</div>
+            </div>
+            <div class="col">
+                <div class="p-3">
+                    <a href="https://www.linkedin.com/in/mahdi-menaa-669727200/">mahdi-menaa 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container overflow-hidden">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3" style="margin-left: 31px;"><i class="fab fa-linkedin"></i>GitHub</div>
+            </div>
+            <div class="col">
+                <div class="p-3">
+                    <a href="https://github.com/Bouchka99/">https://github.com/Bouchka99/
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1 overflow-hidden">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3"><i class="fas fa-mobile-alt"></i> Téléphone</div>
+            </div>
+            <div class="col">
+                <div class="p-3">(+216) 58878149</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container overflow-hidden">
+        <div class="row gx-5">
+            <div class="col">
+
+                <div class="p-3" style="margin-left: 31px;"> <i class="fas fa-map-marked"></i> Adresse</div>
+            </div>
+            <div class="col">
+                <div class="p-3">Route Bouzaienne klm 4.5 Sfax Tunisie</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1 overflow-hidden">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3"><i class="fas fa-mobile-alt"></i> Site Web</div>
+            </div>
+            <div class="col">
+                <div class="p-3">
+                    <a href="https://www.mahdiMenaaProfessional.com/">www.mahdiMenaaProfessional.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</mat-card> -->
+<!-- <div *ngFor="let data of projectData" class="card" style="height: 400px;width: 350px;">
+    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+        <img src="assets/{{data.image}}" class="img-fluid" style="height: px;" />
+        <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </a>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{data.nom}}</h5>
+        <p class="card-text">{{data.description}}</p>
+    </div>
+</div> -->
+<!-- <div *ngFor="let data of projectData" class="col-lg-4 col-md-6 mt-4 pt-2">
+    <div class="card" style="height: 400px;width: 350px;">
+        <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+            <img src="assets/{{data.image}}" class="img-fluid" style="height: px;" />
+            <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{data.nom}}</h5>
+            <p class="card-text">{{data.description}}</p>
+        </div>
+    </div>
+</div> -->
+
+<mat-grid-list style="margin-left: 50px;" cols="2" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let data of projectData">
+        <div class="card" style="height: 520px;width: 370px;">
+            <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+                <img src="assets/{{data.image}}" class="img-fluid" style="height: px;" />
+                <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+            </div>
+            <div class="card-body">
+                <h5 style="font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="card-title">{{data.nom}}</h5>
+                <p class="card-text">{{data.description}}</p>
+                <h3 style="font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Technologies utilisées</h3>
+                <div *ngFor="let d of data.technologie">
+                    <pre class="card-text">    {{[d]}}</pre>
+                </div>
+            </div>
+        </div>
+    </mat-grid-tile>
+
+</mat-grid-list>

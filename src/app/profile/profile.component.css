@@ -1,0 +1,17 @@
+        .example-card {
+            width: 1000px;
+            margin-left: 250px;
+            margin-bottom: 500px;
+            height: 700px;
+            background-color: rgb(211, 211, 211);
+        }
+        
+        img {
+            width: 220px;
+            height: 450px;
+            margin: 25px;
+        }
+        
+        p {
+            margin: 30px;
+        }

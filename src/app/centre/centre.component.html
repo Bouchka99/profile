@@ -1,0 +1,17 @@
+<mat-grid-list style="margin-left: 200px;margin-top: 50px;" cols="2" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let data of centreData">
+        <div class="card" style="height: 520px;width: 370px;">
+            <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+                <img src="assets/{{data.image}}" class="img-fluid" style="height: 300px;width: 500px;" />
+                <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+            </div>
+            <div class="card-body">
+                <h5 style="font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="card-title">{{data.nom}}</h5>
+                <p class="card-text">{{data.contenu}}</p>
+            </div>
+        </div>
+    </mat-grid-tile>
+
+</mat-grid-list>

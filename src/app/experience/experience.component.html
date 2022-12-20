@@ -1,0 +1,21 @@
+<mat-grid-list style="margin-left: 200px;margin-top: 50px;" cols="2" rowHeight="0.8:1">
+    <mat-grid-tile *ngFor="let data of expData">
+        <div class="card" style="height: 600px;width: 370px;">
+            <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+                <img src="assets/{{data.image}}" class="img-fluid" style="height: 250px;width: 500px;" />
+                <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+            </div>
+            <div class="card-body">
+                <h5 style="font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="card-title">{{data.organisme}}</h5>
+                <hr>
+                <p style="margin-bottom: 50px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="card-text">{{data.description}}</p>
+
+                <h5 style="font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="card-title">Période</h5>
+                <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="card-text">{{data.periode}}</p>
+            </div>
+        </div>
+    </mat-grid-tile>
+
+</mat-grid-list>
